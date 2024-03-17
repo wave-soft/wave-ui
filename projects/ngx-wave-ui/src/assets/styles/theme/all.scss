@@ -1,0 +1,10 @@
+@import "./colors.scss";
+@import "./dimensions.scss";
+@import "./typography.scss";
+@import "./transitions.scss";
+
+:root {
+  --box-shadow-1: 0 0  5px rgba(0,0,0,0.1);
+  --box-shadow-2: 0 0  5px rgba(0,0,0,0.2);
+  --box-shadow-3: 0 0  5px rgba(0,0,0,0.3);
+}

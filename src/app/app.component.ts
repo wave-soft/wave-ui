@@ -22,16 +22,17 @@ export class AppComponent {
   menuItems :MenuItemModel[]= [
     {
       title: 'Home',
-      route: '/',
+      route: '/home',
       icon: jamHome,
 
     },{
-      title: 'About',
-      route: '/about',
+      title: 'Design',
+      route: '/design',
       icon: jamHome,
+
     },{
-      title: 'Contact',
-      route: '/contact',
+      title: 'Components',
+      route: '/components',
       icon: jamHome,
     }]
   protected readonly console = console;

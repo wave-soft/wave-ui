@@ -3,9 +3,12 @@
 
 
 $brandColors: ();
+$textColors: (
+  500: #000,
+);
 
 $lightenAmount: 4;
-$startMixAmount: 10;
+$startMixAmount: 15;
 $endMixAmount: 100;
 $changeAmount: calc(($endMixAmount - $startMixAmount) / $lightenAmount);
 $darkenAmount: 4;
@@ -14,10 +17,11 @@ $colorWhite: #fff;
 $colorBlack: #000;
 
 @for $i from 0 through $lightenAmount {
-  $brandColors: map-merge($brandColors, ( ($i + 1) * 100 : mix($colorPrimary, $colorWhite, $i * $changeAmount + $startMixAmount) ));
+  $brandColors: map-merge($brandColors, ( ($i + 1) * 100 : mix($colorPrimary, $colorWhite, $i * $changeAmount + $startMixAmount * 1%)  ));
 }
+
 @for $i from 1 through $darkenAmount {
-  $brandColors: map-merge($brandColors, (( $i + $lightenAmount + 1) * 100 : mix($colorPrimary, $colorBlack,100- $i * $changeAmount) ));
+  $brandColors: map-merge($brandColors, (( $i + $lightenAmount + 1) * 100 : mix($colorPrimary, $colorBlack,100- $i * $changeAmount * 1%) ));
 }
 
 
@@ -30,4 +34,8 @@ $colorBlack: #000;
   @each$key, $value in $brandColors {
     --color-primary-#{$key} : #{$value};
   }
+  @each$key, $value in $textColors {
+    --color-text-#{$key} : #{$value};
+  }
+
 }

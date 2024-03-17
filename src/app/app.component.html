@@ -1,5 +1,9 @@
-<wave-menu [collapsed]="collapsed" direction="column" [items]="menuItems"></wave-menu>
-<button (click)="collapsed = !collapsed" >Collapse</button>
-<router-outlet></router-outlet>
+
+<header>
+  <wave-menu [collapsed]="collapsed" direction="row" [items]="menuItems"></wave-menu>
+</header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
 
 
