@@ -32,12 +32,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -67,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "wave-ui:build:production"
+              "browserTarget": "wave-ui:build:production"
             },
             "development": {
-              "buildTarget": "wave-ui:build:development"
+              "browserTarget": "wave-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "wave-ui:build"
+            "browserTarget": "wave-ui:build"
           }
         },
         "test": {
@@ -107,18 +102,11 @@
       "root": "projects/ngx-wave-ui",
       "sourceRoot": "projects/ngx-wave-ui/src",
       "prefix": "wave",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
-
           "options": {
-            "project": "projects/ngx-wave-ui/ng-package.json",
-            "inlineStyleLanguage": "scss"
+            "project": "projects/ngx-wave-ui/ng-package.json"
           },
           "configurations": {
             "production": {
@@ -134,7 +122,6 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/ngx-wave-ui/tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
@@ -143,5 +130,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ee04b567-03c8-43ad-80ac-b4ccc3efdb51"
   }
 }

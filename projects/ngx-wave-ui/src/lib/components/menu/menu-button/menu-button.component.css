@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  --wave-menu-button-size: var(--spacing-36);
+  --wave-menu-button-icon-size: var(--spacing-16);
+  --wave-menu-button-spacing: calc((var(--wave-menu-button-size) - var(--wave-menu-button-icon-size) )/2);
+
+  gap: var(--wave-menu-button-spacing);
+  box-sizing: border-box;
+  height: var(--spacing-36);
+  border-radius: var(--border-radius-m);
+  cursor: pointer;
+  padding: 0 var(--wave-menu-button-spacing);
+  ng-icon {
+    overflow: visible;
+  }
+  .content {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+  }
+  &.collapsed {
+    padding-right: 0;
+    .content {
+      width: 0;
+      opacity: 0;
+
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-primary-100);
+  }
+}

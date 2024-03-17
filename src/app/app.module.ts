@@ -1,16 +1,24 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {AppComponent} from "./app.component";
-import {NgxWaveUiModule} from "../../projects/ngx-wave-ui/src/lib/ngx-wave-ui.module";
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import {ComponentsModule} from "../../projects/ngx-wave-ui/src/lib/components/components.module";
 
-
-
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   imports: [
-    CommonModule,
-    NgxWaveUiModule,
-    ComponentsModule]
+    BrowserModule,
+    AppRoutingModule,
+    ComponentsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+
+
+}

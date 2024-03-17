@@ -1,2 +1,5 @@
-<wave-button></wave-button>
-<wave-card></wave-card>
+<wave-menu [collapsed]="collapsed" direction="column" [items]="menuItems"></wave-menu>
+<button (click)="collapsed = !collapsed" >Collapse</button>
+<router-outlet></router-outlet>
+
+

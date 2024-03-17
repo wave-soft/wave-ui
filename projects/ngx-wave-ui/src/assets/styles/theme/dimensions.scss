@@ -1,0 +1,39 @@
+$spacings:(
+4: 0.25rem,
+8: 0.5rem,
+12: 0.75rem,
+16: 1rem,
+20: 1.25rem,
+24: 1.5rem,
+28: 1.75rem,
+32: 2rem,
+36: 2.25rem,
+40: 2.5rem,
+44: 2.75rem,
+48: 3rem,
+52: 3.25rem,
+56: 3.5rem,
+60: 3.75rem,
+64: 4rem,
+68: 4.25rem,
+72: 4.5rem,
+76: 4.75rem,
+);
+
+$borderRadius: (
+  s: 0.2rem,
+  m: 0.4rem,
+  l: 0.6rem,
+  xl: 0.8rem,
+  xxl: 1rem,
+);
+
+
+:root {
+  @each$key, $value in $spacings {
+    --spacing-#{$key} : #{$value};
+  }
+  @each$key, $value in $borderRadius {
+    --border-radius-#{$key} : #{$value};
+  }
+}

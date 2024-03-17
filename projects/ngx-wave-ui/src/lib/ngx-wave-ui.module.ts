@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {ComponentsModule} from "./components/components.module";
+import { NgxWaveUiComponent } from './ngx-wave-ui.component';
+import { ButtonComponent } from './components/button/button.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    NgxWaveUiComponent,
+  ],
   imports: [
-    CommonModule,
-    ComponentsModule
+
   ],
   exports: [
-    ComponentsModule
+    NgxWaveUiComponent
   ]
 })
 export class NgxWaveUiModule { }

@@ -1,0 +1,33 @@
+
+
+
+
+$brandColors: ();
+
+$lightenAmount: 4;
+$startMixAmount: 10;
+$endMixAmount: 100;
+$changeAmount: calc(($endMixAmount - $startMixAmount) / $lightenAmount);
+$darkenAmount: 4;
+$colorPrimary: #007bff;
+$colorWhite: #fff;
+$colorBlack: #000;
+
+@for $i from 0 through $lightenAmount {
+  $brandColors: map-merge($brandColors, ( ($i + 1) * 100 : mix($colorPrimary, $colorWhite, $i * $changeAmount + $startMixAmount) ));
+}
+@for $i from 1 through $darkenAmount {
+  $brandColors: map-merge($brandColors, (( $i + $lightenAmount + 1) * 100 : mix($colorPrimary, $colorBlack,100- $i * $changeAmount) ));
+}
+
+
+
+
+:root {
+  --color-primary : #007bff;
+  --color-white : #fff;
+  --color-black : #000;
+  @each$key, $value in $brandColors {
+    --color-primary-#{$key} : #{$value};
+  }
+}

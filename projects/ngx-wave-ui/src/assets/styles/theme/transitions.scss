@@ -1,0 +1,17 @@
+$transitions: (
+  fast: 0.2s,
+  default: 0.3s,
+  slow: 0.5s,
+);
+
+
+:root {
+  @each$key, $value in $transitions {
+    --transition-#{$key} : #{$value};
+  }
+}
+
+* {
+  transition: all var(--transition-default) ease-in-out;
+}
+
