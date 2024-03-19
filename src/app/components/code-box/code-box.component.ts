@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Highlight} from "ngx-highlightjs";
 
 @Component({
   selector: 'app-code-box',
-  standalone: true,
-  imports: [],
+
   templateUrl: './code-box.component.html',
   styleUrl: './code-box.component.scss'
 })
 export class CodeBoxComponent {
+  @Input() code: string;
+
 
 }
