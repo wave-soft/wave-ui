@@ -16,14 +16,28 @@ $colorPrimary: #007bff;
 $colorWhite: #fff;
 $colorBlack: #000;
 
-@for $i from 0 through $lightenAmount {
-  $brandColors: map-merge($brandColors, ( ($i + 1) * 100 : mix($colorPrimary, $colorWhite, $i * $changeAmount + $startMixAmount * 1%)  ));
-}
 
-@for $i from 1 through $darkenAmount {
-  $brandColors: map-merge($brandColors, (( $i + $lightenAmount + 1) * 100 : mix($colorPrimary, $colorBlack,100- $i * $changeAmount * 1%) ));
-}
 
+
+
+@mixin createColorVaritions($color:#8d8d8d,$label:primary,$lightenAmount:4,$darkenAmount:4,$startMixAmount:15) {
+  $changeAmount: calc(($endMixAmount - $startMixAmount) / $lightenAmount);
+  $colors:();
+  @for $i from 0 through $lightenAmount {
+    $colors: map-merge($colors, ( ($i + 1) * 100 : mix($color, $colorWhite, $i * $changeAmount + $startMixAmount * 1%)  ));
+  }
+
+  @for $i from 1 through $darkenAmount {
+    $colors: map-merge($colors, (( $i + $lightenAmount + 1) * 100 : mix($color, $colorBlack,100- $i * $changeAmount * 1%) ));
+  }
+
+
+  @each$key, $value in $colors {
+    --color-#{$label}-#{$key} : #{$value};
+  }
+
+
+}
 
 
 
@@ -31,14 +45,12 @@ $colorBlack: #000;
   --color-primary : #007bff;
   --color-white : #fff;
   --color-black : #000;
-  @each$key, $value in $brandColors {
-    --color-primary-#{$key} : #{$value};
-  }
+  @include createColorVaritions($colorPrimary,primary);
+  @include createColorVaritions(#707070,grey,2,2);
+
   @each$key, $value in $textColors {
     --color-text-#{$key} : #{$value};
   }
-
-
   --color-background-1: #f8f9fa;
   --color-background-2: #fff;
 }
