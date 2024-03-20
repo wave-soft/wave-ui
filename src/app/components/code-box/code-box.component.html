@@ -1,2 +1,8 @@
-<ng-template *ngTemplateOutlet="codeRef"></ng-template>
-<pre><code [languages]="['html','typescript']" [highlight]="code"></code></pre>
+<div class="frame">
+  <span class="title">{{title}}</span>
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+  <pre><code [languages]="['html','typescript']" [highlight]="code"></code></pre>
+
+</div>

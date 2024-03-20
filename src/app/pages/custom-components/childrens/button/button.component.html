@@ -1,8 +1,19 @@
+<app-code-box [code]="codeExample" title="Type">
+  <div [style]="{
+  display:'flex',
+  gap:'5px'
+  }">
+    <wave-button type="default">Click me</wave-button>
+    <wave-button type="primary">Click me</wave-button>
+  </div>
+</app-code-box>
+<app-code-box [code]="codeExample2" title="Icon">
+  <div [style]="{
+  display:'flex',
+  gap:'5px'
+  }">
+    <wave-button [icon]="jamHome" type="default">Click me</wave-button>
+    <wave-button [icon]="jamBaseball" type="primary">Click me</wave-button>
+  </div>
+</app-code-box>
 
-
-
-<app-code-box [code]="codeExample" [codeRef]="codeExempleRef1"></app-code-box>
-<ng-template #codeExempleRef1>
-  <wave-button>Click me</wave-button>
-
-</ng-template>

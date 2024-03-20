@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, HostBinding, Input} from '@angular/core';
+import {IconType} from "@ng-icons/core";
 
 @Component({
   selector: 'wave-button',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class ButtonComponent {
 
+  @HostBinding('class') @Input() type:'default' | 'primary' = 'default'
+  @Input() icon: IconType;
 }

@@ -1,8 +1,40 @@
+@import "projects/ngx-wave-ui/src/assets/styles/theme/typography.scss";
+
 :host {
-  border: 1px solid var(--color-primary-100);
   display: flex;
   flex-direction: column;
-  border-radius:var(--border-radius-m);
-  padding:var(--spacing-24)
+  align-items: stretch;
+  padding-top: var(--spacing-8);
+
+  .frame {
+    border: 1px solid var(--color-primary-100);
+    border-radius: var(--border-radius-m);
+    position: relative;
+
+    .title {
+      position: absolute;
+      top: 0;
+      transform: translate(var(--spacing-24), -50%);
+      background: var(--color-background-2);
+      color: var(--color-primary-500);
+      @include title('s');
+      padding: 0 var(--spacing-8);
+    }
+
+    .content {
+      padding: var(--spacing-24);
+    }
+
+    pre {
+      margin: 0;
+      padding: 0 var(--spacing-4) var(--spacing-4) var(--spacing-4);
+
+      code {
+        border-radius: var(--border-radius-s);
+
+        overflow: auto;
+      }
+    }
+  }
 
 }

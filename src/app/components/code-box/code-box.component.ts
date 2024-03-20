@@ -9,7 +9,5 @@ import {Highlight} from "ngx-highlightjs";
 })
 export class CodeBoxComponent {
   @Input() code!: string;
-  @Input() codeRef!: TemplateRef<any>;
-
-
+  @Input() title:string
 }

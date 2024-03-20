@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {ComponentsModule} from "../../../../components/components.module";
+import {jamAirbnb, jamBaseball, jamHome} from "@ng-icons/jam-icons";
 
 @Component({
   selector: 'app-button',
@@ -10,7 +11,25 @@ import {ComponentsModule} from "../../../../components/components.module";
 export class ButtonComponent {
 
   codeExample = `
-  <wave-button>Click me</wave-button>
+<div [style]="{
+display:'flex',
+gap:'5px'
+}">
+  <wave-button type="default">Default</wave-button>
+  <wave-button type="primary">Primary</wave-button>
+</div>
+  `;
+  codeExample2 = `
+<div [style]="{
+display:'flex',
+gap:'5px'
+}">
+  <wave-button [icon]="jamHome" type="default">Click me</wave-button>
+  <wave-button [icon]="jamBaseball" type="primary">Click me</wave-button>
+</div>
   `;
 
+  protected readonly jamAirbnb = jamAirbnb;
+  protected readonly jamHome = jamHome;
+  protected readonly jamBaseball = jamBaseball;
 }
