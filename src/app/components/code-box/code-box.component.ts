@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, TemplateRef} from '@angular/core';
 import {Highlight} from "ngx-highlightjs";
 
 @Component({
@@ -8,7 +8,8 @@ import {Highlight} from "ngx-highlightjs";
   styleUrl: './code-box.component.scss'
 })
 export class CodeBoxComponent {
-  @Input() code: string;
+  @Input() code!: string;
+  @Input() codeRef!: TemplateRef<any>;
 
 
 }

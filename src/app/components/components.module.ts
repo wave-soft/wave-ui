@@ -6,10 +6,13 @@ import {HighlightModule} from "ngx-highlightjs";
 
 
 @NgModule({
-  declarations: [CodeBoxComponent],
-  imports: [
-    HighlightModule,
-    CommonModule
-  ]
+    declarations: [CodeBoxComponent],
+    exports: [
+        CodeBoxComponent
+    ],
+    imports: [
+        HighlightModule,
+        CommonModule
+    ]
 })
 export class ComponentsModule { }

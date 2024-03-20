@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ComponentsModule} from "../../../../projects/ngx-wave-ui/src/lib/components/components.module";
 import {CustomComponentsComponent} from "./custom-components.component";
-import {RouterOutlet} from "@angular/router";
+import {RouterModule, RouterOutlet} from "@angular/router";
+import {ButtonComponent} from "./childrens/button/button.component";
+import {MenuComponent} from "./childrens/menu/menu.component";
+import {NgxWaveUiModule} from "../../../../projects/ngx-wave-ui/src/lib/ngx-wave-ui.module";
+import {ComponentsModule} from "../../components/components.module";
 
 
 
 
 @NgModule({
-  declarations: [CustomComponentsComponent],
+  declarations: [
+    CustomComponentsComponent,ButtonComponent,MenuComponent],
   imports: [
     CommonModule,
-    ComponentsModule,
-    RouterOutlet,
+    NgxWaveUiModule,
+    RouterModule,
+    ComponentsModule
   ]
 })
 export class CustomComponentsModule { }

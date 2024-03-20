@@ -13,41 +13,58 @@
   &.column {
     --wave-menu-button-size: var(--spacing-36);
     --wave-menu-button-icon-size: var(--spacing-16);
-    --wave-menu-button-spacing: calc((var(--wave-menu-button-size) - var(--wave-menu-button-icon-size) )/2);
+    --wave-menu-button-spacing: calc((var(--wave-menu-button-size) - var(--wave-menu-button-icon-size)) / 2);
 
     gap: var(--wave-menu-button-spacing);
     height: var(--spacing-36);
     padding: 0 var(--wave-menu-button-spacing);
     border: solid 1px transparent;
     border-radius: var(--border-radius-m);
-    ng-icon {
-      overflow: visible;
+
+    .icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--wave-menu-button-icon-size);
+      height: var(--wave-menu-button-icon-size);
+
+      ng-icon {
+        overflow: visible;
+        font-size: var(--wave-menu-button-icon-size);
+      }
     }
+
     .content {
       width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       display: flex;
     }
+
     &.collapsed {
       padding-right: 0;
+
       .content {
         width: 0;
         opacity: 0;
       }
     }
+
     &:hover {
       background-color: var(--color-primary-100);
       color: var(--color-primary-500);
       border-color: var(--color-primary-200);
     }
+
     &:active {
       border-color: var(--color-primary-300);
     }
+
     &.active {
       background-color: var(--color-primary-500);
       color: var(--color-white);
       border-color: var(--color-primary-500);
+
       &:hover {
         background-color: var(--color-primary-400);
         border-color: var(--color-primary-400);
@@ -63,10 +80,12 @@
     ng-icon {
       display: none;
     }
+
     &:hover {
       color: var(--color-primary-500);
       border-top-color: var(--color-primary-500);
     }
+
     &.active {
       color: var(--color-primary-500);
       border-top-color: var(--color-primary-500);
