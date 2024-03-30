@@ -7,12 +7,8 @@ $textColors: (
   500: #000,
 );
 
-$lightenAmount: 4;
-$startMixAmount: 15;
-$endMixAmount: 100;
-$changeAmount: calc(($endMixAmount - $startMixAmount) / $lightenAmount);
-$darkenAmount: 4;
-$colorPrimary: #007bff;
+
+$colorPrimary: #0e77ab;
 $colorWhite: #fff;
 $colorBlack: #000;
 
@@ -21,6 +17,8 @@ $colorBlack: #000;
 
 
 @mixin createColorVaritions($color:#8d8d8d,$label:primary,$lightenAmount:4,$darkenAmount:4,$startMixAmount:15) {
+  $endMixAmount: 100;
+
   $changeAmount: calc(($endMixAmount - $startMixAmount) / $lightenAmount);
   $colors:();
   @for $i from 0 through $lightenAmount {
@@ -42,11 +40,11 @@ $colorBlack: #000;
 
 
 :root {
-  --color-primary : #007bff;
+  --color-primary : #0e77ab;
   --color-white : #fff;
   --color-black : #000;
   @include createColorVaritions($colorPrimary,primary);
-  @include createColorVaritions(#707070,grey,2,2);
+  @include createColorVaritions(#232323,grey,5,0);
 
   @each$key, $value in $textColors {
     --color-text-#{$key} : #{$value};

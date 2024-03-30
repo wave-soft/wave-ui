@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import {NgxWaveUiModule} from "../../projects/ngx-wave-ui/src/lib/ngx-wave-ui.module";
 import {CustomComponentsModule} from "./pages/custom-components/custom-components.module";
 import {HIGHLIGHT_OPTIONS, HighlightModule} from "ngx-highlightjs";
+import {NgOptimizedImage} from "@angular/common";
+import {ComponentsModule} from "./components/components.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {HIGHLIGHT_OPTIONS, HighlightModule} from "ngx-highlightjs";
     AppRoutingModule,
     HighlightModule,
     NgxWaveUiModule,
-    CustomComponentsModule
+    CustomComponentsModule,
+    NgOptimizedImage,
+    ComponentsModule
   ],
 
   providers: [{
