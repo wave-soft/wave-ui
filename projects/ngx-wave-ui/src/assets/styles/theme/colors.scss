@@ -4,7 +4,7 @@
 
 $brandColors: ();
 $textColors: (
-  500: #000,
+  500: var(--color-black),
 );
 
 
@@ -31,7 +31,7 @@ $colorBlack: #000;
 
 
   @each$key, $value in $colors {
-    --color-#{$label}-#{$key} : #{$value};
+    --color-#{""+$label}-#{$key} : #{$value};
   }
 
 
@@ -41,14 +41,14 @@ $colorBlack: #000;
 
 :root {
   --color-primary : #0e77ab;
-  --color-white : #fff;
-  --color-black : #000;
+  --color-white : #{$colorWhite};
+  --color-black : #{$colorBlack};
   @include createColorVaritions($colorPrimary,primary);
   @include createColorVaritions(#232323,grey,5,0);
 
   @each$key, $value in $textColors {
     --color-text-#{$key} : #{$value};
   }
-  --color-background-1: #f8f9fa;
-  --color-background-2: #fff;
+  --color-background-2: color-mix(in srgb, var(--color-white), var(--color-primary) 8%);
+  --color-background-1: var(--color-white);
 }

@@ -3,5 +3,12 @@
   "dest": "../../dist/ngx-wave-ui",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": [
+    {
+      "glob": "**/*",
+      "input": "src/assets",
+      "output": "/assets"
+    }
+  ]
 }
