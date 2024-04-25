@@ -4,7 +4,7 @@ import {MenuItemModel} from "../../../models/components/menu/menu-item.model";
 @Component({
   selector: 'wave-menu-button',
   templateUrl: './menu-button.component.html',
-  styleUrls: ['./menu-button.component.css']
+  styleUrls: ['./menu-button.component.scss']
 })
 export class MenuButtonComponent {
   get item(): MenuItemModel {

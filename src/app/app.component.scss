@@ -11,10 +11,13 @@
 
   header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 0 var(--spacing-24);
     box-shadow: var(--box-shadow-1);
+    app-logo {
+      height: var(--spacing-64);
+    }
   }
   .container {
 

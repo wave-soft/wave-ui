@@ -13,13 +13,14 @@
   &.column {
     --wave-menu-button-size: var(--spacing-36);
     --wave-menu-button-icon-size: var(--spacing-16);
-    --wave-menu-button-spacing: calc((var(--wave-menu-button-size) - var(--wave-menu-button-icon-size)) / 2);
+    --wave-menu-button-border-width: 1px;
+    --wave-menu-button-spacing: calc((var(--wave-menu-button-size) - var(--wave-menu-button-icon-size)) / 2 - var(--wave-menu-button-border-width));
 
     gap: var(--wave-menu-button-spacing);
     height: var(--spacing-36);
     padding: 0 var(--wave-menu-button-spacing);
-    border: solid 1px transparent;
-    border-radius: var(--border-radius-m);
+    border: solid var(--wave-menu-button-border-width) transparent;
+    border-radius: var(--border-radius-s);
 
     .icon-container {
       display: flex;
@@ -31,21 +32,27 @@
       ng-icon {
         overflow: visible;
         font-size: var(--wave-menu-button-icon-size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 
     .content {
       width: 100%;
+      max-width: 1000px;
+
       overflow: hidden;
       text-overflow: ellipsis;
       display: flex;
+      //transition: var(--transition-fast) ease-in-out;
     }
 
     &.collapsed {
       padding-right: 0;
 
       .content {
-        width: 0;
+        max-width: 0;
         opacity: 0;
       }
     }

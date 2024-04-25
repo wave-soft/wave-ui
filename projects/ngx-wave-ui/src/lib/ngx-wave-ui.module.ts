@@ -6,12 +6,13 @@ import {MenuButtonComponent} from "./components/menu/menu-button/menu-button.com
 import {NgIcon} from "@ng-icons/core";
 import {NgForOf, NgIf} from "@angular/common";
 import {RouterLink, RouterLinkActive} from "@angular/router";
+import {CardComponent} from "./components/card/card.component";
 
 
 
 @NgModule({
 
-  declarations: [ButtonComponent, MenuComponent, MenuButtonComponent,NgxWaveUiComponent],
+  declarations: [ButtonComponent, MenuComponent, MenuButtonComponent,NgxWaveUiComponent,CardComponent],
 
   imports: [
     NgIcon,
@@ -23,7 +24,8 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
   ],
   exports: [
     ButtonComponent,
-    MenuComponent
+    MenuComponent,
+    CardComponent
   ]
 })
 export class NgxWaveUiModule { }

@@ -4,15 +4,11 @@
 
 $brandColors: ();
 $textColors: (
-  500: #000,
+  500: var(--color-black),
 );
 
-$lightenAmount: 4;
-$startMixAmount: 15;
-$endMixAmount: 100;
-$changeAmount: calc(($endMixAmount - $startMixAmount) / $lightenAmount);
-$darkenAmount: 4;
-$colorPrimary: #007bff;
+
+$colorPrimary: #0e77ab;
 $colorWhite: #fff;
 $colorBlack: #000;
 
@@ -21,6 +17,8 @@ $colorBlack: #000;
 
 
 @mixin createColorVaritions($color:#8d8d8d,$label:primary,$lightenAmount:4,$darkenAmount:4,$startMixAmount:15) {
+  $endMixAmount: 100;
+
   $changeAmount: calc(($endMixAmount - $startMixAmount) / $lightenAmount);
   $colors:();
   @for $i from 0 through $lightenAmount {
@@ -33,7 +31,7 @@ $colorBlack: #000;
 
 
   @each$key, $value in $colors {
-    --color-#{$label}-#{$key} : #{$value};
+    --color-#{""+$label}-#{$key} : #{$value};
   }
 
 
@@ -42,15 +40,15 @@ $colorBlack: #000;
 
 
 :root {
-  --color-primary : #007bff;
-  --color-white : #fff;
-  --color-black : #000;
+  --color-primary : #0e77ab;
+  --color-white : #{$colorWhite};
+  --color-black : #{$colorBlack};
   @include createColorVaritions($colorPrimary,primary);
-  @include createColorVaritions(#707070,grey,2,2);
+  @include createColorVaritions(#232323,grey,5,0);
 
   @each$key, $value in $textColors {
     --color-text-#{$key} : #{$value};
   }
-  --color-background-1: #f8f9fa;
-  --color-background-2: #fff;
+  --color-background-2: color-mix(in srgb, var(--color-white), var(--color-primary) 8%);
+  --color-background-1: var(--color-white);
 }

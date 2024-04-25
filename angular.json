@@ -20,6 +20,9 @@
             "outputPath": "dist/wave-ui",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "loader": {
+              ".svg": "text"
+            },
             "polyfills": [
               "zone.js"
             ],

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import {MenuItemModel} from "../../projects/ngx-wave-ui/src/lib/models/components/menu/menu-item.model";
 import {jamHome} from "@ng-icons/jam-icons";
 import {CustomComponentsComponent} from "./pages/custom-components/custom-components.component";
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

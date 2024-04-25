@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {CodeBoxComponent} from "./code-box/code-box.component";
 import {HighlightModule} from "ngx-highlightjs";
+import {LogoComponent} from "./logo/logo.component";
 
 
 
 @NgModule({
-    declarations: [CodeBoxComponent],
+    declarations: [CodeBoxComponent,LogoComponent],
     exports: [
-        CodeBoxComponent
+        CodeBoxComponent,LogoComponent
     ],
     imports: [
         HighlightModule,

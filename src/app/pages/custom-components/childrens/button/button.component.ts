@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, HostListener, Type, ViewChild} from '@angular/core';
 import {ComponentsModule} from "../../../../components/components.module";
 import {jamAirbnb, jamBaseball, jamHome} from "@ng-icons/jam-icons";
+import {CustomComponentsComponent} from "../../custom-components.component";
 
 @Component({
   selector: 'app-button',
@@ -9,6 +10,7 @@ import {jamAirbnb, jamBaseball, jamHome} from "@ng-icons/jam-icons";
   styleUrl: './button.component.scss'
 })
 export class ButtonComponent {
+
 
   codeExample = `
 <div [style]="{
