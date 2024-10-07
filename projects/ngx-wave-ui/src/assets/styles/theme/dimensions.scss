@@ -1,34 +1,48 @@
 $spacings:(
-4: 0.25rem,
-8: 0.5rem,
-12: 0.75rem,
-16: 1rem,
-20: 1.25rem,
-24: 1.5rem,
-28: 1.75rem,
-32: 2rem,
-36: 2.25rem,
-40: 2.5rem,
-44: 2.75rem,
-48: 3rem,
-52: 3.25rem,
-56: 3.5rem,
-60: 3.75rem,
-64: 4rem,
-68: 4.25rem,
-72: 4.5rem,
-76: 4.75rem,
+  4: 0.25rem,
+  8: 0.5rem,
+  12: 0.75rem,
+  16: 1rem,
+  20: 1.25rem,
+  24: 1.5rem,
+  28: 1.75rem,
+  32: 2rem,
+  36: 2.25rem,
+  40: 2.5rem,
+  44: 2.75rem,
+  48: 3rem,
+  52: 3.25rem,
+  56: 3.5rem,
+  60: 3.75rem,
+  64: 4rem,
+  68: 4.25rem,
+  72: 4.5rem,
+  76: 4.75rem,
 );
 
 $borderRadius: (
-  s: 0.4rem,
-  m: 0.6rem,
-  l: 0.8rem,
-  xl: 1rem,
-  xxl: 1.2rem,
+  s: 0.3rem,
+  m: 0.4rem,
+  l: 0.5rem,
+  xl: 0.8rem,
+  xxl: 1rem,
 );
 
 
+@mixin isMobile() {
+  @media (max-width: 1000px) {
+    &{
+      @content
+    }
+  }
+}
+@mixin isDesktop() {
+  @media (min-width: 1000px) {
+    &{
+      @content
+    }
+  }
+}
 :root {
   @each$key, $value in $spacings {
     --spacing-#{$key} : #{$value};
@@ -36,4 +50,5 @@ $borderRadius: (
   @each$key, $value in $borderRadius {
     --border-radius-#{$key} : #{$value};
   }
+  --max-width: 1000px;
 }

@@ -104,7 +104,7 @@
       "projectType": "library",
       "root": "projects/ngx-wave-ui",
       "sourceRoot": "projects/ngx-wave-ui/src",
-      "prefix": "wave",
+      "prefix": "wv",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

@@ -1,0 +1,18 @@
+
+
+<button wvButton class="arrow left" type="glass" [class.visible]="showLeft" [icon]="heroChevronLeft" (click)="dragScroll.moveLeft()"></button>
+<button wvButton class="arrow right" type="glass" [class.visible]="showRight" [icon]="heroChevronRight" (click)="dragScroll.moveRight()"></button>
+
+<drag-scroll [scrollbar-hidden]="false" (reachesRightBound)="showRight = !$event" (reachesLeftBound)="showLeft = !$event" >
+  <div drag-scroll-item (click)="onClick(item)"  [style.--width]="width()" *ngFor="let item of items();let i = index" class="carousel-item">
+    <img [style.height]="height()" [style.width]="width()" [src]="item.image">
+    <div *ngIf="item.data" class="description">
+      @if (item.tpl) {
+        <ng-container *ngTemplateOutlet="item.tpl;context:item.data"></ng-container>
+      } @else {
+        {{ item.data }}
+      }
+    </div>
+  </div>
+</drag-scroll>
+

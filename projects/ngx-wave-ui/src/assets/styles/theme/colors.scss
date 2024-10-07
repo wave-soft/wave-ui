@@ -4,13 +4,15 @@
 
 $brandColors: ();
 $textColors: (
-  500: var(--color-black),
+  500: var(--color-white),
 );
 
 
-$colorPrimary: #0e77ab;
+
+$colorPrimary: #FEB91E;
+$colorSecondary: #222222;
 $colorWhite: #fff;
-$colorBlack: #000;
+$colorBlack: #050505;
 
 
 
@@ -38,17 +40,32 @@ $colorBlack: #000;
 }
 
 
+$colors: (
+  "black":#050505,
+  "dark":#222222,
+  "gray":#707070,
+  "graylight":#D9D9D9,
+  "light":#F2F2F2,
+  "white":#fff,
+  "yellow":#FEB91E,
+  "yellight":#FFDC6E,
+  "light-10":rgba(255,255,255,0.1),
+  "light-20":rgba(255,255,255,0.2)
+);
+
+
+
 
 :root {
   --color-primary : #0e77ab;
-  --color-white : #{$colorWhite};
   --color-black : #{$colorBlack};
+  --color-white : #{$colorWhite};
   @include createColorVaritions($colorPrimary,primary);
-  @include createColorVaritions(#232323,grey,5,0);
+  @include createColorVaritions(#232323,gray,5,0);
 
-  @each$key, $value in $textColors {
-    --color-text-#{$key} : #{$value};
+  @each$key, $value in $colors {
+    --color-#{$key} : #{$value};
   }
-  --color-background-2: color-mix(in srgb, var(--color-white), var(--color-primary) 8%);
-  --color-background-1: var(--color-white);
+  --color-background-2: color-mix(in srgb, var(--color-black), var(--color-primary) 8%);
+  --color-background-1: var(--color-black);
 }
