@@ -5,25 +5,23 @@
 :host {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+    gap: var(--spacing-16);
 
-  height: 100%;
-
-  header {
+  .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 var(--spacing-24);
-    box-shadow: var(--box-shadow-1);
-    app-logo {
-      height: var(--spacing-64);
+    flex-direction: column;
+    gap: var(--spacing-16);
+    .row {
+      display: flex;
+      flex-direction: row;
+      gap: var(--spacing-16);
     }
   }
-  .container {
+.nav-right-section {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-24);
+  justify-content: flex-end;
+}
 
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-  }
 }

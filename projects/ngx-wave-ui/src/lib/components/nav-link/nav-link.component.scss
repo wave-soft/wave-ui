@@ -1,0 +1,16 @@
+@import "../../../assets/styles/theme/typography.scss";
+
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  color: var(--color-light);
+  transition: var(--transition-fast);
+  text-decoration: none;
+  @include text(bold);
+  opacity: 1;
+  &:hover {
+    opacity: 0.8;
+  }
+}

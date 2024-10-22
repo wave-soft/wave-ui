@@ -1,48 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+$normal:400;
+$medium:500;
+$bold:600;
+
 $titles:(
-  xl: (
-    font-size: 2.5rem,
+  h1: (
+    font-size: 3rem,
+    font-weight: $bold
   ),
-  l: (
+  h2: (
+    font-weight:$medium ,
     font-size: 1.75rem,
   ),
-  m: (
+  h3: (
+    font-weight:$medium ,
     font-size: 1.5rem,
   ),
-  s: (
-    font-size: 1.25rem,
-  )
 );
+$titlesMobile:(
+  h1: (
+    font-weight: $bold,
+    font-size: 1.5rem,
+  ),
+  h2: (
+    font-weight:$medium,
+    font-size: 1.25rem,
+  ),
+  h3: (
+    font-weight:$medium ,
+    font-size: 1.125rem,
+  ),
+);
+
+
+
+
+
 
 $texts:(
-  l: (
-    font-size: 1.25rem,
-  ),
-  m: (
+  text: (
     font-size: 1rem,
+    font-weight:$normal ,
   ),
-  s: (
-    font-size: 0.875rem,
-  ),
-  xs: (
+  small: (
     font-size: 0.75rem,
+    font-weight:$normal ,
+
+  ),
+  bold: (
+    font-size: 1rem,
+    font-weight:$medium ,
   )
 );
 
-@mixin title($size: m,$bold: false) {
-  font-size: map-get(map-get($titles, $size), font-size);
-  font-weight: if($bold, bold, normal);
+
+
+
+
+
+@mixin title($size: h1) {
+  @media (min-width:641px) {
+    font-size: map-get(map-get($titles, $size), font-size);
+    font-weight: map-get(map-get($titles, $size), font-weight);
+  }
+  @media (max-width:640px) {
+    font-size: map-get(map-get($titlesMobile, $size), font-size);
+    font-weight: map-get(map-get($titlesMobile, $size), font-weight);
+  }
+
 }
 
-@mixin text($size: m,$bold: false) {
+@mixin text($size: text) {
   font-size: map-get(map-get($texts, $size), font-size);
-  font-weight: if($bold, bold, normal);
+  font-weight: map-get(map-get($texts, $size), font-weight);
 }
 
+h1{
+  @include title(h1)
+}h2{
+   @include title(h2)
+ }h3{
+    @include title(h3)
+  }
 
 * {
-  font-family: 'Work Sans', sans-serif;
-  @include text(m);
+  font-style: normal;
+  font-family: "DM Sans", sans-serif;
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {MenuItemModel} from "../../projects/ngx-wave-ui/src/lib/models/components/menu/menu-item.model";
 import {jamHome} from "@ng-icons/jam-icons";
-import {CustomComponentsComponent} from "./pages/custom-components/custom-components.component";
+import {heroFaceSmile, heroMagnifyingGlass} from "@ng-icons/heroicons/outline";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -37,4 +37,6 @@ export class AppComponent {
     }]
   protected readonly console = console;
   collapsed: boolean = false;
+  protected readonly heroFaceSmile = heroFaceSmile;
+  protected readonly heroMagnifyingGlass = heroMagnifyingGlass;
 }

@@ -1,0 +1,62 @@
+@import "../../../assets/styles/theme/typography.scss";
+@import "../../../assets/styles/theme/dimensions.scss";
+
+:host{
+  position: relative;
+  .carousel-item {
+    cursor: pointer;
+    user-select: none;
+    width: var(--width);
+
+    &:not(&:last-of-type) {
+      box-sizing: border-box;
+      width: calc(var(--width) + var(--spacing-16));
+      padding-right: var(--spacing-16);
+    }
+
+  }
+  img {
+    border-radius: var(--border-radius-l);
+    object-fit: cover;
+    margin-bottom: var(--spacing-4);
+  }
+  drag-scroll {
+    pointer-events: auto !important;
+  }
+
+
+
+
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition-fast);
+    @include isMobile {
+      display: none;
+    }
+
+    &.visible {
+
+      visibility: visible;
+      opacity: 1;
+    }
+    &.left {
+      left: 0;
+      transform: translate(-50%,-50%);
+    }
+    &.right {
+      right: 0;
+      transform: translate(50%,-50%);
+    }
+  }
+  .description {
+    color: gray;
+    @include text(small);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
