@@ -103,23 +103,23 @@
         }
       }
     },
-    "ngx-wave-ui": {
+    "@wave-soft/ui": {
       "projectType": "library",
-      "root": "projects/ngx-wave-ui",
-      "sourceRoot": "projects/ngx-wave-ui/src",
+      "root": "projects/@wave-soft/ui",
+      "sourceRoot": "projects/@wave-soft/ui/src",
       "prefix": "wv",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ngx-wave-ui/ng-package.json"
+            "project": "projects/@wave-soft/ui/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-wave-ui/tsconfig.lib.prod.json"
+              "tsConfig": "projects/@wave-soft/ui/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ngx-wave-ui/tsconfig.lib.json"
+              "tsConfig": "projects/@wave-soft/ui/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -127,7 +127,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ngx-wave-ui/tsconfig.spec.json",
+            "tsConfig": "projects/@wave-soft/ui/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

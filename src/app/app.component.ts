@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MenuItemModel} from "../../projects/ngx-wave-ui/src/lib/models/components/menu/menu-item.model";
+import {MenuItemModel} from "../../projects/@wave-soft/ui/src/lib/models/components/menu/menu-item.model";
 import {jamHome} from "@ng-icons/jam-icons";
 import {heroFaceSmile, heroMagnifyingGlass} from "@ng-icons/heroicons/outline";
 @Component({

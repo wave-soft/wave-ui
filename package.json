@@ -6,8 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "watch-lib": "ng build ngx-wave-ui --watch --configuration development",
-    "build-lib": "ng build ngx-wave-ui --configuration production",
+    "watch-lib": "ng build @wave-soft/ui --watch --configuration development",
+    "build-lib": "ng build @wave-soft/ui --configuration production",
     "test": "ng test"
   },
   "private": true,

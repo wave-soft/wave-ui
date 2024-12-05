@@ -13,8 +13,8 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ngx-wave-ui": [
-        "dist/ngx-wave-ui"
+      "@wave-soft/ui": [
+        "dist/@wave-soft/ui"
       ]
     },
     "declaration": false,

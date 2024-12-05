@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ngx-wave-ui
+ * Public API Surface of @wave-soft/ui
  */
 
 export * from './lib/ngx-wave-ui.service';
