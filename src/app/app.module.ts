@@ -8,7 +8,7 @@ import {NgOptimizedImage} from "@angular/common";
 import {LogoComponent} from "../../projects/ngx-wave-ui/src/lib/components/logo/logo.component";
 import {HeaderComponent} from "../../projects/ngx-wave-ui/src/lib/components/header/header.component";
 import {NavLinkComponent} from "../../projects/ngx-wave-ui/src/lib/components/nav-link/nav-link.component";
-import {ButtonComponent} from "ngx-wave-ui";
+import { ButtonComponent } from 'projects/ngx-wave-ui/src/public-api';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,6 @@ import {ButtonComponent} from "ngx-wave-ui";
     ButtonComponent,
     HeaderComponent,
     NavLinkComponent,
-    ButtonComponent
   ],
 
   providers: [{
