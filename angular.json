@@ -33,7 +33,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "projects/ngx-wave-ui/src/assets/styles/styles.scss"
             ],
             "scripts": []
           },
@@ -138,6 +139,9 @@
     }
   },
   "cli": {
-    "analytics": "ee04b567-03c8-43ad-80ac-b4ccc3efdb51"
+    "analytics": "ee04b567-03c8-43ad-80ac-b4ccc3efdb51",
+    "cache": {
+      "enabled": false
+    }
   }
 }

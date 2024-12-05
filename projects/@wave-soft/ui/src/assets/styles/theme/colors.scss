@@ -60,8 +60,8 @@ $colors: (
   --color-primary : #0e77ab;
   --color-black : #{$colorBlack};
   --color-white : #{$colorWhite};
-  @include createColorVaritions($colorPrimary,primary);
-  @include createColorVaritions(#232323,gray,5,0);
+  //@include createColorVaritions($colorPrimary,primary);
+  //@include createColorVaritions(#232323,gray,5,0);
 
   @each$key, $value in $colors {
     --color-#{$key} : #{$value};

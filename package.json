@@ -8,18 +8,19 @@
     "watch": "ng build --watch --configuration development",
     "watch-lib": "ng build @wave-soft/ui --watch --configuration development",
     "build-lib": "ng build @wave-soft/ui --configuration production",
-    "test": "ng test"
+    "test": "ng test",
+    "release": "release-it"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^18.2.7",
-    "@angular/common": "^18.2.7",
-    "@angular/compiler": "^18.2.7",
-    "@angular/core": "^18.2.7",
-    "@angular/forms": "^18.2.7",
-    "@angular/platform-browser": "^18.2.7",
-    "@angular/platform-browser-dynamic": "^18.2.7",
-    "@angular/router": "^18.2.7",
+    "@angular/animations": "^18.2.8",
+    "@angular/common": "^18.2.8",
+    "@angular/compiler": "^18.2.8",
+    "@angular/core": "^18.2.8",
+    "@angular/forms": "^18.2.8",
+    "@angular/platform-browser": "^18.2.8",
+    "@angular/platform-browser-dynamic": "^18.2.8",
+    "@angular/router": "^18.2.8",
     "@ng-icons/core": "^27.2.0",
     "@ng-icons/heroicons": "^29.5.1",
     "@ng-icons/jam-icons": "^27.2.0",
@@ -30,9 +31,9 @@
     "zone.js": "~0.14.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^18.2.7",
-    "@angular/cli": "~18.2.7",
-    "@angular/compiler-cli": "^18.2.7",
+    "@angular-devkit/build-angular": "^18.2.8",
+    "@angular/cli": "~18.2.8",
+    "@angular/compiler-cli": "^18.2.8",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
@@ -41,6 +42,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^18.2.1",
+    "release-it": "^17.10.0",
     "typescript": "~5.4.2"
   }
 }

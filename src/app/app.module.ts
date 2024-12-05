@@ -23,7 +23,6 @@ import {ButtonComponent} from "../../projects/@wave-soft/ui/src/lib/components/b
     ButtonComponent,
     HeaderComponent,
     NavLinkComponent,
-    ButtonComponent
   ],
 
   providers: [{
